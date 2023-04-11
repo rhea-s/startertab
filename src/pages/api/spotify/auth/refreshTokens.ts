@@ -25,7 +25,7 @@ export default async function handler(
   }
 
   console.log("me-Rhea");
-    console.log(key);
+    console.log(ENCRYPT_KEY);
 
   if (!ENCRYPT_KEY) {
     return res
