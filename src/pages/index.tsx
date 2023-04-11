@@ -88,9 +88,6 @@ const Home: NextPage<HomeProps> = ({ cookies }) => {
           />
         )}
         <>
-          {showingTutorial && (
-            <Tutorial setShowingTutorial={setShowingTutorial} />
-          )}
           <Flex
             width="100%"
             overflow="auto"
@@ -115,19 +112,16 @@ const Home: NextPage<HomeProps> = ({ cookies }) => {
     <>
       {toDisplay}
       {isEditingTileGrid && <TileLayoutActions colorMode={colorMode} />}
-      {!isOpen && !showingMobileWarning && tutorialProgress !== 0 && (
+      {!isOpen && !showingMobileWarning && (
         <SettingsToggle
           onOpen={() => {
             onOpen();
-            if (showingTutorial) {
-              setTutorialProgress(tutorialProgress + 1);
-            }
           }}
           color={settingsToggleColor}
         />
       )}
       <ShowUpdateToast />
-      <ShowNewTabToast setShowingTutorial={setShowingTutorial} />
+      <ShowNewTabToast />
     </>
   );
 };
