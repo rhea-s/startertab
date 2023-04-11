@@ -38,7 +38,7 @@ export default async function handler(
 
     res.setHeader("Set-Cookie", [
       cookie.serialize("spotifyAccessToken", access_token, {
-        httpOnly: false,
+        httpOnly: true,
         secure: true,
         maxAge: 34560000,
         sameSite: "none",
@@ -46,7 +46,7 @@ export default async function handler(
         encode: (value) => AES.encrypt(value, key).toString(),
       }),
       cookie.serialize("spotifyRefreshToken", refresh_token, {
-        httpOnly: false,
+        httpOnly: true,
         secure: true,
         maxAge: 34560000,
         sameSite: "none",
