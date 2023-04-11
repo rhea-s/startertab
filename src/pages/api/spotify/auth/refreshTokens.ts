@@ -24,6 +24,9 @@ export default async function handler(
     return res.status(400).send("Failed to provide access or refresh token");
   }
 
+  console.log("me-Rhea");
+    console.log(key);
+
   if (!ENCRYPT_KEY) {
     return res
       .status(500)

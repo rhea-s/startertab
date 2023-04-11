@@ -24,7 +24,7 @@ const localStorageThemeNameEffect: <T>(key: string) => AtomEffect<T> =
     if (savedValue != null) {
       setSelf(JSON.parse(savedValue));
     } else {
-      localStorage.setItem(key, JSON.stringify("main"));
+      localStorage.setItem(key, JSON.stringify("Main"));
     }
 
     onSet((newValue) => {
@@ -40,6 +40,6 @@ export const userSettingState = atom({
 
 export const colorModeState = atom({
   key: "ColorMode",
-  default: "uninitilized",
+  default: "Main",
   effects: [localStorageThemeNameEffect("themeName")],
 });

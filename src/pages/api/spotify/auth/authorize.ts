@@ -20,6 +20,9 @@ export default async function handler(
       res.status(500).send("No code on the redirect from Spotify");
     }
 
+    console.log("Rhea");
+    console.log(key);
+
     if (!key) {
       return res
         .status(500)
