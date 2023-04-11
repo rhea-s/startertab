@@ -121,7 +121,7 @@ const Home: NextPage<HomeProps> = ({ cookies }) => {
         />
       )}
       <ShowUpdateToast />
-      <ShowNewTabToast setShowingTutorial={false} />
+      <ShowNewTabToast setShowingTutorial={setShowingTutorial} />
     </>
   );
 };
