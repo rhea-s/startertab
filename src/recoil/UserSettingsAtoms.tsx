@@ -24,7 +24,7 @@ const localStorageThemeNameEffect: <T>(key: string) => AtomEffect<T> =
     if (savedValue != null) {
       setSelf(JSON.parse(savedValue));
     } else {
-      localStorage.setItem(key, JSON.stringify("Colored Light"));
+      localStorage.setItem(key, JSON.stringify("main"));
     }
 
     onSet((newValue) => {
